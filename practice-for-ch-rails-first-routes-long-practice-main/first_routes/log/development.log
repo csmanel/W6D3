@@ -38,3 +38,187 @@ Processing by UsersController#index as */*
 Completed 200 OK in 74ms (Views: 73.2ms | ActiveRecord: 0.0ms | Allocations: 559)
 
 
+Started GET "/" for ::1 at 2023-11-22 14:45:36 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: first_routes_development. Available database configurations can be found in config/database.yml file.
+To resolve this error:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-11-22 14:45:51 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: first_routes_development. Available database configurations can be found in config/database.yml file.
+To resolve this error:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-11-22 14:45:53 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: first_routes_development. Available database configurations can be found in config/database.yml file.
+To resolve this error:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-11-22 14:45:53 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: first_routes_development. Available database configurations can be found in config/database.yml file.
+To resolve this error:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+Started GET "/users" for ::1 at 2023-11-22 14:45:55 -0500
+
+ActiveRecord::NoDatabaseError - We could not find your database: first_routes_development. Available database configurations can be found in config/database.yml file.
+To resolve this error:
+- Did you create the database for this app, or delete it? You may need to create your database.
+- Has the database name changed? Check your database.yml config has the correct database name.
+To create your database, run:
+        bin/rails db:create:
+
+  [1m[35m (59.2ms)[0m  [1m[35mCREATE DATABASE "first_routes_development" ENCODING = 'unicode'[0m
+  [1m[35m (37.7ms)[0m  [1m[35mCREATE DATABASE "first_routes_test" ENCODING = 'unicode'[0m
+Started GET "/users" for ::1 at 2023-11-22 14:46:28 -0500
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1891)
+
+
+Started GET "/users?fav_food=pizza" for ::1 at 2023-11-22 14:48:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  Parameters: {"fav_food"=>"pizza"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 4)
+Completed 200 OK in 2ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1893)
+
+
+Started POST "/users" for ::1 at 2023-11-22 14:51:13 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2023-11-22 14:51:16 -0500
+
+AbstractController::ActionNotFound - The action 'create' could not be found for UsersController:
+
+Started POST "/users" for ::1 at 2023-11-22 14:53:09 -0500
+Processing by UsersController#create as */*
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 193)
+
+
+Started POST "/users?fav_food=pizza" for ::1 at 2023-11-22 14:53:47 -0500
+Processing by UsersController#create as */*
+  Parameters: {"fav_food"=>"pizza"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 67)
+
+
+Started GET "/users/2" for ::1 at 2023-11-22 14:55:03 -0500
+
+AbstractController::ActionNotFound - The action 'show' could not be found for UsersController:
+
+Started GET "/users/2" for ::1 at 2023-11-22 14:57:36 -0500
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 162)
+
+
+Started GET "/users?some_category[a_key]=[FILTERED]&some_category[a_second_key]=[FILTERED]&some_category[inner_inner_hash][key]=value&something_else=aaahhhhh" for ::1 at 2023-11-22 15:00:52 -0500
+Processing by UsersController#index as */*
+  Parameters: {"some_category"=>{"a_key"=>"[FILTERED]", "a_second_key"=>"[FILTERED]", "inner_inner_hash"=>{"key"=>"value"}}, "something_else"=>"aaahhhhh"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 403)
+
+
+Started GET "/users" for ::1 at 2023-11-22 15:01:56 -0500
+Processing by UsersController#index as */*
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 148)
+
+
+Started GET "/users" for ::1 at 2023-11-22 15:02:45 -0500
+Processing by UsersController#index as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started GET "/users" for ::1 at 2023-11-22 15:02:59 -0500
+Processing by UsersController#index as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started POST "/users" for ::1 at 2023-11-22 15:03:07 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 92)
+
+
+Started GET "/users?food=pizza" for ::1 at 2023-11-22 15:05:07 -0500
+Processing by UsersController#index as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started GET "/users?food=pizza" for ::1 at 2023-11-22 15:05:09 -0500
+Processing by UsersController#index as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | Allocations: 1)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 138)
+
+
+Started POST "/users?food=pizza" for ::1 at 2023-11-22 15:05:12 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+Started POST "/users?food=donuts" for ::1 at 2023-11-22 15:05:20 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"donuts", "dessert"=>"ice cream", "drink"=>"coffee"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 69)
+
+
+Started POST "/users?car=mercedes" for ::1 at 2023-11-22 15:05:33 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee", "car"=>"mercedes"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 70)
+
+
+Started POST "/users?car=mustang" for ::1 at 2023-11-22 15:05:44 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee", "car"=>"mustang"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 70)
+
+
+Started POST "/users?gun=ak47" for ::1 at 2023-11-22 15:05:55 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee", "gun"=>"ak47"}
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 70)
+
+
+Started POST "/users?car=bmw" for ::1 at 2023-11-22 15:06:29 -0500
+Processing by UsersController#create as */*
+  Parameters: {"food"=>"pizza", "dessert"=>"ice cream", "drink"=>"coffee", "car"=>"bmw"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 70)
+
+
