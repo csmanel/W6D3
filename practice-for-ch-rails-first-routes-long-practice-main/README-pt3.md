@@ -38,14 +38,14 @@ this action is not defined on your `UsersController`:
 
 ```text
 Started POST "/users" for ::1 at 2022-02-21 12:36:07 -0500
-  
+
 AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
 ...
 ```
 
 Go ahead and add that method to the controller. Again, if you don't explicitly
 render or redirect, Rails is going to try to render the template with the same
-name; it's going to look for __create.html.erb__ in your __app/views/users__
+name; it's going to look for **create.html.erb** in your **app/views/users**
 folder, which you don't have. To prevent this, you need to explicitly render
 something simple back. In this case, render the params that came in with the
 request. You can `render json:`, which will automatically call `to_json` on the
@@ -106,7 +106,7 @@ the `:id` matcher saved the `2` from your URL in the params!
 
 ```text
 Started POST "/users/2" for ::1 at 2022-02-22 11:53:43 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/users/2"):
 ```
 
@@ -136,10 +136,8 @@ Here's how you would accomplish this:
 
 ```html
 <!-- in Postman's "Body" tab -->
-some_category[a_key]: another value
-some_category[a_second_key]: yet another value
-some_category[inner_inner_hash][key]: value
-something_else: aaahhhhh
+some_category[a_key]: another value some_category[a_second_key]: yet another
+value some_category[inner_inner_hash][key]: value something_else: aaahhhhh
 
 <!-- in the query string -->
 '/users?some_category[a_key]=another+value&some_category[a_second_key]=yet+another+value&some_category[inner_inner_hash][key]=value&something_else=aaahhhhh'
