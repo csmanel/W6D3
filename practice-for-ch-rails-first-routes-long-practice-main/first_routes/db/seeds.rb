@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+ApplicationRecord.transction do 
+
+  puts 'Destroying tables...'
+  User.destroy_all 
+  Artwork.destroy_all 
+
+  
+
+end
